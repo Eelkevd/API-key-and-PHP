@@ -1,0 +1,18 @@
+<?php
+	
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $userName = $_POST["username"]; 
+    $chatMsg = $_POST["message"];
+    
+
+if(isset($_SERVER['HTTP_REFERER'])) {
+    $previous = $_SERVER['HTTP_REFERER'];
+}
+    die(header("Location: ".$_SERVER["HTTP_REFERER"]));
+
+} elseif ($_SERVER['REQUEST_METHOD'] === 'GET') { 
+   
+}
+    
+    
+?>
