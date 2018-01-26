@@ -38,14 +38,15 @@ function sendMessage(){
 	var chatMessage = document.getElementById('chatField');
 	
 	//test alertbox
-	alert(urlWrite);
+	//alert(urlWrite);
 	
 	// Post chat message
 	if (valueMsg != ""){
 		
-		xhr.open('post', 'api_test1.php', true);
-		xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded"); 
-		xhr.send(urlWrite);
+		xhr.open('PUT', 'api_test1.php?username=eelke&message=hoi', false);
+		//xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded"); 
+		xhr.send();
+		console.log(xhr.response);
 		//var messageId = xhr.response;
 		
 		//grabChatMessageId(messageId);

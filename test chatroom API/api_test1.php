@@ -1,9 +1,9 @@
 <?php
 	
 if ($_SERVER['REQUEST_METHOD'] === 'PUT') {
-    $userName = $_PUT["username"]; 
-    $chatMsg = $_PUT["message"];
-    $content = $userName + $chatMsg;
+    $userName = $_GET["username"]; 
+    $chatMsg = $_GET["message"];
+    $content = $userName . $chatMsg;
     echo $content;
 } 
     
