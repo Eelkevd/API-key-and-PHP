@@ -43,23 +43,29 @@ function sendMessage(){
 	// Post chat message
 	if (valueMsg != ""){
 		
-		xhr.open('PUT', 'api_test1.php?username='+ userName + '&message='+ valueMsg, false);
+		xhr.open('POST', 'api_test1.php?mykey='+ userName + '&value='+ valueMsg, false);
 		//xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded"); 
 		xhr.send();
-		console.log(xhr.response);
+		//console.log(xhr.response);
 		//var messageId = xhr.response;
 		
-		//grabChatMessageId(messageId);
-		var newMessage = xhr.response;
+		grabChatMessageId();
+		//var newMessage = xhr.response;
 		
-		chatMessage.innerHTML += userName + ":" + " " + newMessage + "<br>";
+		//chatMessage.innerHTML +=  newMessage + "<br>";
 		document.getElementById("chatInput").value = "";
 	}
 }
 
-function grabChatMessageId(id){
-	var urlRead = "https://codegorilla.nl/read_write/api.php?action=read&mykey=" + myKey + "&id=" + id;
-	xhr.open('GET', urlRead, false);
+function grabChatMessageId(){
+	xhr.open('GET', 'api_test1.php?mykey='+ userName, false);
+	xhr.onreadystatechange = function () {
+  		if(xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+	    var allmessages=xhr.response; //messages arrive as one giant string, separated by "ENTER"
+		document.getElementById("chatField").innerHTML = allmessages.replace(/(?:\r\n|\r|\n)/g, '<br />'); //writes messages to div, replaces enter with <br/>
+		scrollBottom(); //calls scroll function so newest messages are shown
+	  	}
+	};
 	xhr.send();
 }
 
