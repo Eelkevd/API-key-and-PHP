@@ -15,7 +15,7 @@ function loadChatroom(){
 		document.getElementById("chatRoom").style.display = "block";
 		document.getElementById("logIn").style.display = "none";
 		document.getElementById("showUsername").innerHTML = "welcome" + " " + userName;
-		document.getElementById("showKey").innerHTML = "You're talking to" + " " + myKey;
+		document.getElementById("showKey").innerHTML = "You're in chatroom:" + " " + myKey;
 		
 		/*myInterval = setInterval(function(){
 			getAllIds();
