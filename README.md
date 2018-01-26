@@ -1,2 +1,2 @@
 # Swagger JSON
-This is a swagger JSON built by the [swagger-codegen](https://github.com/swagger-api/swagger-codegen) project.
+https://app.swaggerhub.com/apis/Eelke-Codegorilla/API-Eelke-2.0/1.0.1-oas3 API documentatie
