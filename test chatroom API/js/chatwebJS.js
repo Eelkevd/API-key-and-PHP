@@ -43,16 +43,16 @@ function sendMessage(){
 	// Post chat message
 	if (valueMsg != ""){
 		
-		xhr.open('PUT', 'api_test1.php?username=eelke&message=hoi', false);
+		xhr.open('PUT', 'api_test1.php?username='+ userName + '&message='+ valueMsg, false);
 		//xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded"); 
 		xhr.send();
 		console.log(xhr.response);
 		//var messageId = xhr.response;
 		
 		//grabChatMessageId(messageId);
-		//var newMessage = xhr.response;
+		var newMessage = xhr.response;
 		
-		//chatMessage.innerHTML += "> " + mykey + ":" + " " + newMessage + "<br>";
+		chatMessage.innerHTML += userName + ":" + " " + newMessage + "<br>";
 		document.getElementById("chatInput").value = "";
 	}
 }

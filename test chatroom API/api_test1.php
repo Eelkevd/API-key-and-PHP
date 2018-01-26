@@ -3,7 +3,7 @@
 if ($_SERVER['REQUEST_METHOD'] === 'PUT') {
     $userName = $_GET["username"]; 
     $chatMsg = $_GET["message"];
-    $content = $userName . $chatMsg;
+    $content = $chatMsg;
     echo $content;
 } 
     
