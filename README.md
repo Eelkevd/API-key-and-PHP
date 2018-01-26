@@ -3,7 +3,7 @@
 Created a chatapp with textfile as database.
 
 # Version 1.5 (26-01-2018)
-Not fully operational. Switching from simple echo system to file database. No id and mykey doesn't work with loading old messages.
+Not fully operational. Switching from direct response system to file database. 
 
 # Changelog
 - Text file as database instead of response $content
