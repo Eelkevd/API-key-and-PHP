@@ -21,3 +21,6 @@ Not fully operational. Switching from direct response system to file database.
 
 # Swagger JSON
 https://app.swaggerhub.com/apis/Eelke-Codegorilla/API-Eelke-2.0/1.0.1-oas3 API documentation
+
+# LIVE DEMO
+http://wijzijncodegorilla.nl/eelkevandijk/Chatapp_1.5/Chatweb.html 
